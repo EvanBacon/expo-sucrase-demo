@@ -1,0 +1,23 @@
+diff --git a/node_modules/metro-config/src/defaults/defaults.js b/node_modules/metro-config/src/defaults/defaults.js
+index e639706..4c14865 100644
+--- a/node_modules/metro-config/src/defaults/defaults.js
++++ b/node_modules/metro-config/src/defaults/defaults.js
+@@ -46,5 +46,6 @@ exports.assetResolutions = ["1", "1.5", "2", "3", "4"];
+ exports.sourceExts = ["js", "json", "ts", "tsx"];
+ exports.moduleSystem = require.resolve("metro/src/lib/polyfills/require.js");
+ exports.platforms = ["ios", "android", "windows", "web"];
+-exports.DEFAULT_METRO_MINIFIER_PATH = "metro-minify-uglify";
++// exports.DEFAULT_METRO_MINIFIER_PATH = "metro-minify-uglify";
++exports.DEFAULT_METRO_MINIFIER_PATH = require.resolve('../../../../minify-esbuild');
+ exports.defaultCreateModuleIdFactory = defaultCreateModuleIdFactory;
+diff --git a/node_modules/metro-config/src/defaults/noop.js b/node_modules/metro-config/src/defaults/noop.js
+new file mode 100644
+index 0000000..2dd1206
+--- /dev/null
++++ b/node_modules/metro-config/src/defaults/noop.js
+@@ -0,0 +1,4 @@
++module.exports = (options) => {
++    return options;
++};
++  
+\ No newline at end of file

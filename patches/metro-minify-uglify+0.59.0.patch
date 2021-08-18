@@ -1,0 +1,15 @@
+diff --git a/node_modules/metro-minify-uglify/src/minifier.js b/node_modules/metro-minify-uglify/src/minifier.js
+index cfd35e3..87d2f15 100644
+--- a/node_modules/metro-minify-uglify/src/minifier.js
++++ b/node_modules/metro-minify-uglify/src/minifier.js
+@@ -44,8 +44,9 @@ function _defineProperty(obj, key, value) {
+ const uglify = require("uglify-es");
+ 
+ function minifier(options) {
++  console.time("uglify");
+   const result = minify(options);
+-
++  console.timeEnd("uglify");
+   if (!options.map || result.map == null) {
+     return {
+       code: result.code

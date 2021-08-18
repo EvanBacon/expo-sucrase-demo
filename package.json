@@ -6,6 +6,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
+    "dev": "expo start -c",
+    "prod": "expo export -c --public-url https://github.com/",
     "postinstall": "patch-package"
   },
   "resolutions": {

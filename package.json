@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "expo": "~42.0.1",
@@ -16,7 +17,9 @@
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0"
+    "sucrase": "^3.20.1",
+    "@babel/core": "^7.9.0",
+    "patch-package": "^6.4.7"
   },
   "private": true
 }

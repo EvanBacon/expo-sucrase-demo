@@ -1,0 +1,13 @@
+diff --git a/node_modules/metro/src/JSTransformer/worker.js b/node_modules/metro/src/JSTransformer/worker.js
+index bb286c8..88463a3 100644
+--- a/node_modules/metro/src/JSTransformer/worker.js
++++ b/node_modules/metro/src/JSTransformer/worker.js
+@@ -244,7 +244,7 @@ class JsTransformer {
+ 
+       let ast =
+         transformResult.ast ||
+-        babylon.parse(sourceCode, {
++        babylon.parse(transformResult.code || sourceCode, {
+           sourceType: "unambiguous"
+         });
+ 

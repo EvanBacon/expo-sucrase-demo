@@ -1,5 +1,8 @@
 # expo-sucrase-demo
 
+
+> This project has been improved and added to Expo CLI under the `EXPO_USE_EXOTIC` environment variable! [Learn more](https://twitter.com/Baconbrix/status/1449043817663905793).
+
 Example of using sucrase to bundle an Expo project instead of Babel
 
 
